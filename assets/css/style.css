@@ -1,0 +1,47 @@
+.menu .menu-content {
+    margin-top: 25px;
+}
+
+#specials-tab-1 .bakmie-original img,
+#specials-tab-2 .bakmie-yamin img,
+#specials-tab-3 .bakmie-bakso img,
+#specials-tab-4 .bakmie-pangsit img,
+#specials-tab-5 .bakmie-komplit img {
+    border-radius: 10%;
+}
+
+.about .about-img {
+    border-radius: 10%;
+}
+
+/* Menu Order Button Styles */
+.menu .menu-order {
+    margin: 15px 95px 0 95px;
+}
+
+.btn-order {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(139, 69, 19, 0.1);
+    color: var(--accent-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid;
+    border-color: rgba(139, 69, 19, 0.3);
+}
+
+.btn-order:hover {
+    background-color: rgba(139, 69, 19, 0.9);
+    border-color: rgba(139, 69, 19, 0.8);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-order i {
+    font-size: 14px;
+}

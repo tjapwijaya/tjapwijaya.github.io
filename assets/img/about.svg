@@ -1,0 +1,87 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8f5f0"/>
+  
+  <!-- Ground -->
+  <ellipse cx="300" cy="380" rx="250" ry="15" fill="#d4c4a8" opacity="0.6"/>
+  
+  <!-- Cart Body -->
+  <rect x="150" y="200" width="300" height="120" rx="10" fill="#8B4513" stroke="#654321" stroke-width="3"/>
+  
+  <!-- Cart Top -->
+  <rect x="140" y="190" width="320" height="20" rx="10" fill="#A0522D"/>
+  
+  <!-- Wheels -->
+  <circle cx="200" cy="340" r="25" fill="#2F4F4F" stroke="#1C1C1C" stroke-width="3"/>
+  <circle cx="200" cy="340" r="15" fill="#696969"/>
+  <circle cx="400" cy="340" r="25" fill="#2F4F4F" stroke="#1C1C1C" stroke-width="3"/>
+  <circle cx="400" cy="340" r="15" fill="#696969"/>
+  
+  <!-- Wheel spokes -->
+  <g stroke="#1C1C1C" stroke-width="2">
+    <line x1="185" y1="340" x2="215" y2="340"/>
+    <line x1="200" y1="325" x2="200" y2="355"/>
+    <line x1="385" y1="340" x2="415" y2="340"/>
+    <line x1="400" y1="325" x2="400" y2="355"/>
+  </g>
+  
+  <!-- Cart Handle -->
+  <rect x="120" y="240" width="40" height="8" rx="4" fill="#654321"/>
+  <rect x="115" y="235" width="8" height="18" rx="4" fill="#654321"/>
+  
+  <!-- Steaming Pot -->
+  <ellipse cx="300" cy="250" rx="80" ry="40" fill="#C0C0C0" stroke="#A9A9A9" stroke-width="2"/>
+  <ellipse cx="300" cy="240" rx="80" ry="15" fill="#E6E6FA"/>
+  
+  <!-- Pot Handle -->
+  <path d="M 220 250 Q 210 240 220 230" stroke="#A9A9A9" stroke-width="4" fill="none"/>
+  <path d="M 380 250 Q 390 240 380 230" stroke="#A9A9A9" stroke-width="4" fill="none"/>
+  
+  <!-- Steam -->
+  <g fill="#E6E6FA" opacity="0.7">
+    <path d="M 280 220 Q 275 210 280 200 Q 285 190 280 180" stroke="#E6E6FA" stroke-width="3" fill="none"/>
+    <path d="M 300 215 Q 295 205 300 195 Q 305 185 300 175" stroke="#E6E6FA" stroke-width="3" fill="none"/>
+    <path d="M 320 220 Q 325 210 320 200 Q 315 190 320 180" stroke="#E6E6FA" stroke-width="3" fill="none"/>
+  </g>
+  
+  <!-- Noodles in pot -->
+  <g stroke="#FFD700" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M 250 245 Q 270 240 290 245 Q 310 250 330 245"/>
+    <path d="M 260 250 Q 280 245 300 250 Q 320 255 340 250"/>
+    <path d="M 255 255 Q 275 250 295 255 Q 315 260 335 255"/>
+  </g>
+  
+  <!-- Chicken pieces -->
+  <ellipse cx="270" cy="245" rx="8" ry="6" fill="#DEB887"/>
+  <ellipse cx="320" cy="250" rx="8" ry="6" fill="#DEB887"/>
+  <ellipse cx="290" cy="255" rx="8" ry="6" fill="#DEB887"/>
+  
+  <!-- Cart Sign -->
+  <rect x="180" y="120" width="240" height="60" rx="5" fill="#8B0000" stroke="#654321" stroke-width="2"/>
+  
+  <!-- Sign Text -->
+  <text x="300" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFD700">BAKMIE AYAM</text>
+  <text x="300" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#FFD700">TJAP WIJAYA</text>
+  
+  <!-- Sign poles -->
+  <rect x="190" y="180" width="4" height="20" fill="#654321"/>
+  <rect x="406" y="180" width="4" height="20" fill="#654321"/>
+  
+  <!-- Bowls on cart -->
+  <ellipse cx="220" cy="280" rx="15" ry="8" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="1"/>
+  <ellipse cx="380" cy="280" rx="15" ry="8" fill="#FFFFFF" stroke="#D3D3D3" stroke-width="1"/>
+  
+  <!-- Chopsticks -->
+  <g stroke="#8B4513" stroke-width="2">
+    <line x1="210" y1="275" x2="225" y2="265"/>
+    <line x1="212" y1="277" x2="227" y2="267"/>
+    <line x1="375" y1="275" x2="390" y2="265"/>
+    <line x1="377" y1="277" x2="392" y2="267"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="3" fill="#FFD700" opacity="0.6"/>
+  <circle cx="500" cy="80" r="4" fill="#FFD700" opacity="0.6"/>
+  <circle cx="520" cy="120" r="2" fill="#FFD700" opacity="0.6"/>
+  
+</svg>

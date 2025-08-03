@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5E6D3;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E8D5B7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4C4A8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Steam effect -->
+    <radialGradient id="steamGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- Bowl gradient -->
+    <radialGradient id="bowlGradient" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#e0e0e0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0c0c0;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Noodle gradient -->
+    <linearGradient id="noodleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4e4a6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e6d078;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4bc4a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Broth gradient -->
+    <radialGradient id="brothGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#D2B48C;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#DAA520;stop-opacity:0.5" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGradient)"/>
+  
+  <!-- Light pattern overlay -->
+  <pattern id="lightPattern" patternUnits="userSpaceOnUse" width="40" height="40">
+    <circle cx="20" cy="20" r="1" fill="#FFFFFF" opacity="0.1"/>
+  </pattern>
+  <rect width="1920" height="1080" fill="url(#lightPattern)"/>
+  
+  <!-- Decorative pattern -->
+  <g opacity="0.1">
+    <circle cx="200" cy="200" r="80" fill="#cda45e"/>
+    <circle cx="1720" cy="300" r="60" fill="#cda45e"/>
+    <circle cx="300" cy="800" r="40" fill="#cda45e"/>
+    <circle cx="1600" cy="900" r="70" fill="#cda45e"/>
+  </g>
+  
+  <!-- Main bowl positioned center-right -->
+  <g transform="translate(1200, 450)">
+    <!-- Bowl shadow -->
+    <ellipse cx="0" cy="180" rx="220" ry="50" fill="#000000" opacity="0.2"/>
+    
+    <!-- Bowl outer rim -->
+    <ellipse cx="0" cy="0" rx="200" ry="180" fill="url(#bowlGradient)" stroke="#909090" stroke-width="3"/>
+    
+    <!-- Bowl inner -->
+    <ellipse cx="0" cy="5" rx="185" ry="165" fill="#f8f8f8" stroke="#b0b0b0" stroke-width="1"/>
+    
+    <!-- Broth with better depth -->
+    <ellipse cx="0" cy="-5" rx="170" ry="150" fill="url(#brothGradient)"/>
+    <ellipse cx="0" cy="-8" rx="160" ry="140" fill="#DAA520" opacity="0.3"/>
+    
+    <!-- Enhanced noodles with more realistic curves -->
+    <g fill="url(#noodleGradient)">
+      <!-- Main noodle strands with better curves -->
+      <path d="M-140,-60 Q-100,-40 -60,-55 Q-20,-70 20,-50 Q60,-30 100,-45 Q140,-60 180,-40" stroke="url(#noodleGradient)" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <path d="M-120,-30 Q-80,-10 -40,-25 Q0,-40 40,-20 Q80,0 120,-15 Q160,-30 200,-10" stroke="url(#noodleGradient)" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M-160,-20 Q-120,0 -80,-15 Q-40,-30 0,-10 Q40,10 80,-5 Q120,-20 160,0" stroke="url(#noodleGradient)" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <path d="M-100,10 Q-60,30 -20,15 Q20,0 60,20 Q100,40 140,25 Q180,10 220,30" stroke="url(#noodleGradient)" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M-130,30 Q-90,50 -50,35 Q-10,20 30,40 Q70,60 110,45 Q150,30 190,50" stroke="url(#noodleGradient)" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M-80,50 Q-40,70 0,55 Q40,40 80,60 Q120,80 160,65" stroke="url(#noodleGradient)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <!-- Additional noodle layers for depth -->
+      <path d="M-110,-45 Q-70,-25 -30,-40 Q10,-55 50,-35 Q90,-15 130,-30" stroke="url(#noodleGradient)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
+      <path d="M-90,5 Q-50,25 -10,10 Q30,-5 70,15 Q110,35 150,20" stroke="url(#noodleGradient)" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    </g>
+    
+    <!-- Enhanced vegetables with better shapes -->
+    <g fill="#90EE90" opacity="0.6">
+      <ellipse cx="-70" cy="-40" rx="18" ry="30" transform="rotate(25)"/>
+      <ellipse cx="50" cy="-30" rx="15" ry="25" transform="rotate(-20)"/>
+      <ellipse cx="-30" cy="0" rx="12" ry="22" transform="rotate(50)"/>
+      <ellipse cx="80" cy="10" rx="14" ry="20" transform="rotate(-35)"/>
+      <!-- Green onion pieces -->
+      <rect x="-40" y="-15" width="8" height="25" rx="4" fill="#228B22" transform="rotate(15)"/>
+      <rect x="20" y="5" width="6" height="20" rx="3" fill="#228B22" transform="rotate(-25)"/>
+    </g>
+    
+    <!-- Enhanced meat pieces -->
+    <g fill="#D2B48C" opacity="0.6">
+      <rect x="-90" y="-20" width="25" height="18" rx="4" transform="rotate(35)"/>
+      <rect x="70" y="-5" width="22" height="15" rx="3" transform="rotate(-25)"/>
+      <rect x="-15" y="-35" width="18" height="12" rx="3" transform="rotate(65)"/>
+      <rect x="40" y="20" width="20" height="14" rx="3" transform="rotate(-10)"/>
+      <!-- Additional smaller pieces -->
+      <circle cx="-50" cy="15" r="8" fill="#CD853F"/>
+      <circle cx="100" cy="-10" r="6" fill="#CD853F"/>
+    </g>
+    
+    <!-- Enhanced steam effects -->
+    <g opacity="0.7">
+      <ellipse cx="-60" cy="-140" rx="10" ry="25" fill="url(#steamGradient)"/>
+      <ellipse cx="-10" cy="-150" rx="12" ry="30" fill="url(#steamGradient)"/>
+      <ellipse cx="40" cy="-145" rx="8" ry="22" fill="url(#steamGradient)"/>
+      <ellipse cx="-30" cy="-160" rx="9" ry="28" fill="url(#steamGradient)"/>
+      <ellipse cx="70" cy="-155" rx="11" ry="25" fill="url(#steamGradient)"/>
+      <ellipse cx="10" cy="-170" rx="7" ry="20" fill="url(#steamGradient)"/>
+      <!-- Additional steam wisps -->
+      <ellipse cx="-80" cy="-120" rx="6" ry="18" fill="url(#steamGradient)" opacity="0.5"/>
+      <ellipse cx="90" cy="-130" rx="8" ry="22" fill="url(#steamGradient)" opacity="0.6"/>
+    </g>
+    
+    <!-- Bowl rim highlight -->
+    <ellipse cx="0" cy="-5" rx="185" ry="165" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3"/>
+  </g>
+  
+  <!-- Secondary smaller bowl on the left -->
+  <g transform="translate(400, 500)" opacity="0.8">
+    <!-- Bowl shadow -->
+    <ellipse cx="0" cy="120" rx="130" ry="30" fill="#000000" opacity="0.15"/>
+    
+    <!-- Bowl outer -->
+    <ellipse cx="0" cy="0" rx="130" ry="110" fill="url(#bowlGradient)" stroke="#909090" stroke-width="2"/>
+    
+    <!-- Bowl inner -->
+    <ellipse cx="0" cy="3" rx="120" ry="100" fill="#f8f8f8" stroke="#b0b0b0" stroke-width="1"/>
+    
+    <!-- Broth with depth -->
+    <ellipse cx="0" cy="-3" rx="110" ry="90" fill="url(#brothGradient)"/>
+    <ellipse cx="0" cy="-5" rx="105" ry="85" fill="#DAA520" opacity="0.2"/>
+    
+    <!-- Enhanced noodles -->
+    <g fill="url(#noodleGradient)">
+      <path d="M-90,-35 Q-50,-20 -10,-30 Q30,-40 70,-25 Q110,-10 150,-20" stroke="url(#noodleGradient)" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M-70,-5 Q-30,10 10,0 Q50,-10 90,5 Q130,20 170,10" stroke="url(#noodleGradient)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-100,10 Q-60,25 -20,15 Q20,5 60,20 Q100,35 140,25" stroke="url(#noodleGradient)" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M-80,30 Q-40,45 0,35 Q40,25 80,40" stroke="url(#noodleGradient)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Small vegetables -->
+    <g fill="#90EE90" opacity="0.5">
+      <ellipse cx="-40" cy="-15" rx="8" ry="12" transform="rotate(20)"/>
+      <ellipse cx="30" cy="-10" rx="6" ry="10" transform="rotate(-15)"/>
+      <ellipse cx="-10" cy="5" rx="5" ry="8" transform="rotate(45)"/>
+    </g>
+    
+    <!-- Small meat pieces -->
+    <g fill="#D2B48C" opacity="0.5">
+      <rect x="-50" y="-5" width="12" height="8" rx="2" transform="rotate(25)"/>
+      <rect x="40" y="0" width="10" height="6" rx="2" transform="rotate(-20)"/>
+      <circle cx="-20" cy="10" r="4" fill="#CD853F"/>
+    </g>
+    
+    <!-- Enhanced steam -->
+    <g opacity="0.6">
+      <ellipse cx="-30" cy="-90" rx="6" ry="18" fill="url(#steamGradient)"/>
+      <ellipse cx="10" cy="-95" rx="7" ry="20" fill="url(#steamGradient)"/>
+      <ellipse cx="40" cy="-85" rx="5" ry="15" fill="url(#steamGradient)"/>
+      <ellipse cx="-10" cy="-100" rx="4" ry="12" fill="url(#steamGradient)" opacity="0.4"/>
+    </g>
+    
+    <!-- Bowl rim highlight -->
+    <ellipse cx="0" cy="-3" rx="120" ry="100" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.2"/>
+  </g>
+  
+  <!-- Enhanced Chopsticks -->
+  <g transform="translate(800, 550)" opacity="0.9">
+    <!-- Chopstick shadows -->
+    <rect x="2" y="2" width="220" height="5" rx="2.5" fill="#000000" opacity="0.2" transform="rotate(25)"/>
+    <rect x="7" y="10" width="220" height="5" rx="2.5" fill="#000000" opacity="0.2" transform="rotate(30)"/>
+    
+    <!-- Main chopsticks -->
+    <rect x="0" y="0" width="220" height="5" rx="2.5" fill="#8b4513" transform="rotate(25)"/>
+    <rect x="5" y="8" width="220" height="5" rx="2.5" fill="#a0522d" transform="rotate(30)"/>
+    
+    <!-- Chopstick tips (darker) -->
+    <rect x="0" y="0" width="30" height="5" rx="2.5" fill="#654321" transform="rotate(25)"/>
+    <rect x="5" y="8" width="30" height="5" rx="2.5" fill="#704214" transform="rotate(30)"/>
+    
+    <!-- Chopstick highlights -->
+    <rect x="10" y="1" width="200" height="1" rx="0.5" fill="#cd853f" opacity="0.6" transform="rotate(25)"/>
+    <rect x="15" y="9" width="200" height="1" rx="0.5" fill="#daa520" opacity="0.6" transform="rotate(30)"/>
+  </g>
+  
+  <!-- Enhanced Decorative elements -->
+  <g opacity="0.4">
+    <!-- Scattered ingredients with better details -->
+    <g transform="translate(600, 200)">
+      <circle cx="0" cy="0" r="10" fill="#F0E68C"/> <!-- Green onion -->
+      <circle cx="0" cy="0" r="8" fill="#FFFF99" opacity="0.7"/>
+      <rect x="-2" y="-8" width="4" height="16" rx="2" fill="#228B22" opacity="0.8"/>
+    </g>
+    
+    <g transform="translate(1400, 800)">
+      <ellipse cx="0" cy="0" rx="8" ry="12" fill="#FF6347"/> <!-- Chili -->
+      <ellipse cx="0" cy="0" rx="6" ry="10" fill="#FF4500" opacity="0.8"/>
+      <rect x="-1" y="-12" width="2" height="6" rx="1" fill="#228B22"/>
+    </g>
+    
+    <g transform="translate(200, 600)">
+      <circle cx="0" cy="0" r="7" fill="#F0E68C"/> <!-- Vegetable -->
+      <circle cx="0" cy="0" r="5" fill="#ADFF2F" opacity="0.7"/>
+    </g>
+    
+    <g transform="translate(1700, 200)">
+      <circle cx="0" cy="0" r="9" fill="#D2B48C"/> <!-- Spice -->
+      <circle cx="0" cy="0" r="7" fill="#DEB887" opacity="0.8"/>
+      <circle cx="0" cy="0" r="3" fill="#8B7355"/>
+    </g>
+    
+    <!-- Additional scattered elements -->
+    <g transform="translate(300, 300)">
+      <ellipse cx="0" cy="0" rx="6" ry="4" fill="#FFE4B5" transform="rotate(45)"/> <!-- Garlic -->
+    </g>
+    
+    <g transform="translate(1500, 600)">
+      <circle cx="0" cy="0" r="4" fill="#FF69B4"/> <!-- Small spice -->
+    </g>
+    
+    <g transform="translate(100, 400)">
+      <rect x="-3" y="-8" width="6" height="16" rx="3" fill="#32CD32" transform="rotate(20)"/> <!-- Green onion piece -->
+    </g>
+  </g>
+  
+  <!-- Subtle overlay for text readability -->
+  <rect width="1920" height="1080" fill="#8B7355" opacity="0.1"/>
+</svg>
