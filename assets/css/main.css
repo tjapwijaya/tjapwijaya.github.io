@@ -25,6 +25,7 @@
   --default-color: rgba(101, 67, 33, 0.9); /* Default color used for the majority of the text content across the entire website */
   --heading-color: #654321; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #8b1313; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color-rgb: 139, 19, 19; /* RGB values for accent color for use with rgba() */
   --accent-gold: #D4AF37; /* Gold accent for luxury feel */
   --accent-green: #6B8E23; /* Green accent for garnish elements */
   --surface-color: rgba(255, 255, 255, 0.8); /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -368,7 +369,46 @@ h6 {
 ------------------------------*/
 .scrolled .header {
   --background-color: rgba(245, 230, 211, 0.98);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(245, 230, 211, 0.3);
+  /* Fallback for browsers that don't support backdrop-filter */
+  background: rgba(245, 230, 211, 0.98);
+}
+
+/* Modern browsers with backdrop-filter support - desktop only */
+@supports (backdrop-filter: blur(10px)) {
+  @media (min-width: 1200px) {
+    .scrolled .header {
+      backdrop-filter: blur(10px);
+      background: rgba(245, 230, 211, 0.85);
+    }
+  }
+}
+
+/* Alternative approach for mobile - use background instead of backdrop-filter */
+@media (max-width: 1199px) {
+  .scrolled .header {
+    background: rgba(245, 230, 211, 0.95);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Ensure mobile nav stays above the scrolled header */
+  .scrolled .mobile-nav-active .navmenu {
+    background: rgba(245, 230, 211, 0.98);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px 0;
+  }
+  
+  /* Additional safety for mobile nav toggle */
+  .scrolled .mobile-nav-active .mobile-nav-toggle {
+    background: rgba(245, 230, 211, 0.95);
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -482,104 +522,166 @@ h6 {
 
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
+  /* Mobile Navigation Toggle Button */
   .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    padding: 8px;
+    border-radius: 50%;
   }
 
+  .mobile-nav-toggle:hover {
+    transform: scale(1.05);
+  }
+
+  .mobile-nav-toggle:active {
+    transform: scale(0.95);
+  }
+
+  /* Mobile Navigation Container */
   .navmenu {
     padding: 0;
     z-index: 9997;
   }
 
+  /* Mobile Navigation Menu */
   .navmenu ul {
     display: none;
     list-style: none;
     position: absolute;
     inset: 60px 20px 20px 20px;
-    padding: 10px 0;
+    padding: 20px 0;
     margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
-    transition: 0.3s;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 9998;
   }
 
+  /* Mobile Navigation Links */
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
-    padding: 10px 20px;
+    padding: 16px 24px;
     font-family: var(--nav-font);
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 4px 12px;
+    position: relative;
   }
 
+  .navmenu a:hover {
+    background: rgba(var(--accent-color-rgb), 0.1);
+    color: var(--accent-color);
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(var(--accent-color-rgb), 0.15);
+  }
+
+  .navmenu a:active {
+    transform: translateX(2px) scale(0.98);
+  }
+
+  /* Mobile Navigation Icons */
   .navmenu a i,
   .navmenu a:focus i {
     font-size: 12px;
     line-height: 0;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
+    margin-left: 8px;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    transition: all 0.3s ease;
+    background: rgba(var(--accent-color-rgb), 0.1);
+    color: var(--accent-color);
   }
 
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
+    background: var(--accent-color);
     color: var(--contrast-color);
+    transform: scale(1.1);
   }
 
+  /* Active Navigation States */
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
+    color: var(--accent-color);
+    background: rgba(var(--accent-color-rgb), 0.08);
   }
 
   .navmenu .active i,
   .navmenu .active:focus i {
-    background-color: var(--accent-color);
+    background: var(--accent-color);
     color: var(--contrast-color);
-    transform: rotate(180deg);
+    transform: rotate(180deg) scale(1.1);
   }
 
+  /* Dropdown Menus */
   .navmenu .dropdown ul {
     position: static;
     display: none;
     z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
+    padding: 8px 0;
+    margin: 8px 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(var(--accent-color-rgb), 0.2);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
+    background: rgba(var(--accent-color-rgb), 0.05);
+    border: 1px solid rgba(var(--accent-color-rgb), 0.1);
   }
 
   .navmenu .dropdown>.dropdown-active {
     display: block;
-    background-color: rgba(33, 37, 41, 0.03);
+    background: rgba(var(--accent-color-rgb), 0.05);
+    animation: slideDown 0.3s ease-out;
+    border-left: 3px solid var(--accent-color);
   }
 
+  /* Enhanced dropdown styling */
+  .navmenu .dropdown ul li {
+    position: relative;
+  }
+
+  .navmenu .dropdown ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+    transform: translateY(-50%);
+  }
+
+  .navmenu .dropdown ul li:hover::before {
+    width: 4px;
+  }
+
+  /* Mobile Navigation Active State */
   .mobile-nav-active {
     overflow: hidden;
   }
@@ -592,18 +694,167 @@ h6 {
     right: 15px;
     margin-right: 0;
     z-index: 9999;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 
   .mobile-nav-active .navmenu {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
+    background: linear-gradient(135deg, rgba(33, 37, 41, 0.95), rgba(33, 37, 41, 0.85));
+    backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 9998;
   }
 
   .mobile-nav-active .navmenu>ul {
+    background: linear-gradient(135deg, #F5F0E8 0%, #F0E6D6 50%, #EBD9C4 100%);
     display: block;
+    animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Enhanced mobile navigation active state */
+  .mobile-nav-active .navmenu>ul li {
+    animation: fadeInScale 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .mobile-nav-active .navmenu>ul li:nth-child(1) { animation-delay: 0.1s; }
+  .mobile-nav-active .navmenu>ul li:nth-child(2) { animation-delay: 0.2s; }
+  .mobile-nav-active .navmenu>ul li:nth-child(3) { animation-delay: 0.3s; }
+  .mobile-nav-active .navmenu>ul li:nth-child(4) { animation-delay: 0.4s; }
+  .mobile-nav-active .navmenu>ul li:nth-child(5) { animation-delay: 0.5s; }
+  .mobile-nav-active .navmenu>ul li:nth-child(6) { animation-delay: 0.6s; }
+  .mobile-nav-active .navmenu>ul li:nth-child(7) { animation-delay: 0.7s; }
+  .mobile-nav-active .navmenu>ul li:nth-child(8) { animation-delay: 0.8s; }
+
+  /* Mobile Navigation Animations */
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Mobile Navigation Loading Animation */
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Mobile Navigation Pulse Effect */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(var(--accent-color-rgb), 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(var(--accent-color-rgb), 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(var(--accent-color-rgb), 0);
+    }
+  }
+
+  /* Enhanced Mobile Navigation for Smaller Screens */
+  @media (max-width: 768px) {
+    .navmenu ul {
+      inset: 50px 15px 15px 15px;
+      border-radius: 12px;
+      padding: 15px 0;
+    }
+
+    .navmenu a,
+    .navmenu a:focus {
+      padding: 14px 20px;
+      font-size: 15px;
+      margin: 2px 8px;
+    }
+
+    .mobile-nav-active .mobile-nav-toggle {
+      top: 12px;
+      right: 12px;
+      font-size: 28px;
+    }
+  }
+
+  /* Extra Small Screens */
+  @media (max-width: 480px) {
+    .navmenu ul {
+      inset: 45px 10px 10px 10px;
+      border-radius: 10px;
+      padding: 12px 0;
+    }
+
+    .navmenu a,
+    .navmenu a:focus {
+      padding: 12px 16px;
+      font-size: 14px;
+      margin: 1px 6px;
+    }
+
+    .navmenu a i,
+    .navmenu a:focus i {
+      width: 24px;
+      height: 24px;
+      font-size: 10px;
+    }
+  }
+
+  /* Custom Scrollbar for Mobile Navigation */
+  .navmenu ul::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .navmenu ul::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+
+  .navmenu ul::-webkit-scrollbar-thumb {
+    background: rgba(var(--accent-color-rgb), 0.3);
+    border-radius: 3px;
+    transition: background 0.3s ease;
+  }
+
+  .navmenu ul::-webkit-scrollbar-thumb:hover {
+    background: rgba(var(--accent-color-rgb), 0.5);
+  }
+
+  /* Focus States for Accessibility */
+  .navmenu a:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+
+  .mobile-nav-toggle:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 50%;
   }
 }
 
@@ -1328,11 +1579,8 @@ section > * {
 .menu .menu-item {
   margin-top: 50px;
   position: relative;
-  background: var(--surface-gradient);
   padding: 20px;
   border-radius: 15px;
-  border: 1px solid rgba(139, 69, 19, 0.1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 
@@ -1370,7 +1618,7 @@ section > * {
 
 .menu .menu-content a {
   color: var(--heading-color);
-  background: var(--background-color);
+  background: #f4e3c8;
   padding-right: 10px;
   position: relative;
   z-index: 3;
@@ -1383,7 +1631,7 @@ section > * {
 }
 
 .menu .menu-content span {
-  background: var(--background-color);
+  background: #f4e3c8;
   color: var(--accent-color);
   position: relative;
   z-index: 3;
